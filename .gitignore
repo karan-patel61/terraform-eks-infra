@@ -1,0 +1,7 @@
+# Local terraform directory (binaries and providers)
+.terraform/
+
+# State files (these should be stored in S3/Remote backend, not Git)
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info
