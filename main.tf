@@ -1,12 +1,12 @@
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
-  version = "~> 20.0"
+  version = "~> 21.0"
   
-  cluster_name    = "devops-capstone-cluster"
-  cluster_version = "1.29"
+  name    = "devops-capstone-cluster"
+  kubernetes_version = 1.35
 
   # Public access (for your local terminal) restricted by AWS IAM
-  cluster_endpoint_public_access = true
+  endpoint_public_access = true
 
   vpc_id     = module.vpc.vpc_id
   subnet_ids = module.vpc.private_subnets
