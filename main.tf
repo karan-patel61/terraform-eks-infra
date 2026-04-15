@@ -3,7 +3,7 @@ module "eks" {
   version = "~> 21.0"
   
   name    = "devops-capstone-cluster"
-  kubernetes_version = 1.35
+  kubernetes_version = 1.32
 
   # Public access (for your local terminal) restricted by AWS IAM
   endpoint_public_access = true
